@@ -32,6 +32,9 @@ Add the repository and dependency to your project's `composer.json`:
 }
 ```
 
+Run `composer update` to install the necessary prerequisites.
+If your app is not able to automatically discover packages, run `php artisan package:discover` alternatively.
+
 You need to the following env variables:
 
 - `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
