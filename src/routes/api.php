@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\WeatherController;
-use Illuminate\Http\Request;
+use Momento\LaravelExample\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 Route::get('/weather/{city}', [WeatherController::class, 'city']);
 Route::get('/weather/{zipcode}/{countryCode}', [WeatherController::class, 'zipcode']);

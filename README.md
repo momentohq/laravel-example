@@ -1,21 +1,10 @@
-# laravel-weather-apis
+# Momento Laravel Example
 
 ## Run the app via Docker
 
 Build a Docker image for the app:
 
-Please ask Erika for the weather api key.
-```bash
-docker build --tag weather-app --build-arg token=<YOUR_AUTH_TOKEN> --build-arg key=<WEATHER_API_KEY> .
-```
-
-Run the Docker container with the built image above
-
-```bash
-docker run -d -p 8000:8000 weather-app
-```
-
-And try the curl commands below!
+Coming soon.
 
 ---
 
@@ -27,15 +16,25 @@ Need to install the following:
 - [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
 - [gRPC for PHP](https://cloud.google.com/php/grpc)
 
-Once the above are installed, run:
+Add the repository and dependency to your project's `composer.json`:
 
-```bash
-composer install
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/momentohq/laravel-example"
+    }
+  ],
+  "require": {
+    "momentohq/laravel-example": "dev-main"
+  }
+}
 ```
 
 You need to the following env variables:
 
-- `API_KEY` this is for weather API. Ask Erika for the key.
+- `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
 - `MOMENTO_AUTH_TOKEN`
 - `MOMENTO_CACHE_NAME`
 
