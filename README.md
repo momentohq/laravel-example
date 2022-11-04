@@ -32,6 +32,21 @@ Add the repository and dependency to your project's `composer.json`:
 }
 ```
 
+Finally, add the required config to your `config/cache.php`:
+
+```php
+'default' => env('CACHE_DRIVER', 'momento'),
+
+'stores' => [
+        'momento' => [
+            'driver' => 'momento',
+            'cache_name' => env('MOMENTO_CACHE_NAME'),
+            'default_ttl' => 60,
+        ],
+		// ...
+],
+```
+
 Run `composer update` to install the necessary prerequisites.
 If your app is not able to automatically discover packages, run `php artisan package:discover` alternatively.
 
