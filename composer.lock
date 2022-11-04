@@ -546,12 +546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/laravel-cache.git",
-                "reference": "9e8e8d9fa5ed1cfe581450bd1ac2d53a10b3b2d9"
+                "reference": "5ab2b1c8f392e00cf9d1e8730f4a25a9b32cf756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/9e8e8d9fa5ed1cfe581450bd1ac2d53a10b3b2d9",
-                "reference": "9e8e8d9fa5ed1cfe581450bd1ac2d53a10b3b2d9",
+                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/5ab2b1c8f392e00cf9d1e8730f4a25a9b32cf756",
+                "reference": "5ab2b1c8f392e00cf9d1e8730f4a25a9b32cf756",
                 "shasum": ""
             },
             "require": {
@@ -567,7 +567,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Momento\\": "src/"
+                    "Momento\\Cache\\": "src/"
                 }
             },
             "license": [
@@ -578,7 +578,7 @@
                 "source": "https://github.com/momentohq/laravel-cache/tree/feat/add-files-for-cache",
                 "issues": "https://github.com/momentohq/laravel-cache/issues"
             },
-            "time": "2022-11-04T21:39:20+00:00"
+            "time": "2022-11-04T23:15:08+00:00"
         },
         {
             "name": "psr/http-client",
