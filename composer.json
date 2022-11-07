@@ -22,7 +22,7 @@
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.5",
         "momentohq/client-sdk-php": "0.2.0",
-        "momentohq/laravel-cache": "dev-feat/add-files-for-cache"
+        "momentohq/laravel-cache": "dev-main"
     },
     "autoload": {
         "psr-4": {
