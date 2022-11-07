@@ -103,10 +103,20 @@ Add the repository and dependency to your project's `composer.json`:
     {
       "type": "vcs",
       "url": "https://github.com/momentohq/laravel-example"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/momentohq/laravel-cache"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/momentohq/client-sdk-php"
     }
   ],
   "require": {
-    "momentohq/laravel-example": "dev-main"
+    "momentohq/laravel-example": "dev-main",
+    "momentohq/laravel-cache": "dev-main",
+    "momentohq/client-sdk-php": "0.2.0"
   }
 }
 ```
