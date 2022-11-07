@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6df134de758b2e790fe2bea9133d1aba",
+    "content-hash": "91145df80631465411a12760d892d4bd",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -542,16 +542,16 @@
         },
         {
             "name": "momentohq/laravel-cache",
-            "version": "dev-feat/add-files-for-cache",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/laravel-cache.git",
-                "reference": "5ab2b1c8f392e00cf9d1e8730f4a25a9b32cf756"
+                "reference": "4d4e140488fda2e6bfc699178caf2aa3c48b0302"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/5ab2b1c8f392e00cf9d1e8730f4a25a9b32cf756",
-                "reference": "5ab2b1c8f392e00cf9d1e8730f4a25a9b32cf756",
+                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/4d4e140488fda2e6bfc699178caf2aa3c48b0302",
+                "reference": "4d4e140488fda2e6bfc699178caf2aa3c48b0302",
                 "shasum": ""
             },
             "require": {
@@ -575,10 +575,10 @@
             ],
             "description": "Taggable Momento cache driver for Laravel.",
             "support": {
-                "source": "https://github.com/momentohq/laravel-cache/tree/feat/add-files-for-cache",
+                "source": "https://github.com/momentohq/laravel-cache/tree/v0.1.2",
                 "issues": "https://github.com/momentohq/laravel-cache/issues"
             },
-            "time": "2022-11-04T23:15:08+00:00"
+            "time": "2022-11-07T22:45:49+00:00"
         },
         {
             "name": "psr/http-client",
@@ -855,9 +855,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "momentohq/laravel-cache": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
