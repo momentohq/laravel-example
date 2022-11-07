@@ -114,8 +114,8 @@ Add the repository and dependency to your project's `composer.json`:
     }
   ],
   "require": {
-    "momentohq/laravel-example": "dev-main",
-    "momentohq/laravel-cache": "dev-main",
+    "momentohq/laravel-example": "0.1.0",
+    "momentohq/laravel-cache": "0.1.2",
     "momentohq/client-sdk-php": "0.2.0"
   }
 }
