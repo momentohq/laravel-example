@@ -14,79 +14,6 @@ Build a Docker image for the app:
 
 Coming soon.
 
-## cURL commands
-```bash
-curl http://127.0.0.1:8000/api/weather/<your-favorite-city>
-
-Example:
-curl http://127.0.0.1:8000/api/weather/denver
-```
-
-or
-
-```bash
-curl http://127.0.0.1:8000/api/weather/<your-favorite-zipcode>/<country-code-such-as-us>
-
-Example:
-curl http://127.0.0.1:8000/api/weather/98101/us
-```
-
-or
-
-```bash
-curl http://127.0.0.1:8000/api/weather/id/<your-favorite-city-id>
-
-City id can be found here: http://bulk.openweathermap.org/sample/
-
-Example:
-curl http://127.0.0.1:8000/api/weather/id/833
-```
-
-## Exploring the Momento Cache Integration
-How to use Momento cache client and cache driver can be found in (WeatherController.php)[src/Controllers/WeatherController.php].
-
-Use Momento client directly:
-```php
-$authProvider = new EnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN");
-$momentoClient = new SimpleCacheClient($authProvider, 60);
-$cacheName = "zipcode-cache";
-$momentoClient->createCache($cacheName);
-$apiKey = env("WEATHER_API_KEY");
-$url = "https://api.openweathermap.org/data/2.5/weather?q={$zipcode},{$countryCode}&appid={$apiKey}";
-$zipcodeWeatherInfo = "{$zipcode}-{$countryCode}";
-$result = $momentoClient->get($cacheName, $zipcodeWeatherInfo);
-if ($result->asHit()) {
-    return $result->asHit()->value();
-}
-elseif ($result->asMiss()) {
-    $res = $this->httpClient->get($url);
-    if ($res->getStatusCode() == 200) {
-        $json = $res->getBody();
-        // 10 minutes TTLc
-        $momentoClient->set($zipcodeWeatherInfo, $zipcodeWeatherInfo, $json, 600);
-        return $json;
-    }
-}
-```
-
-Use Momento as a Laravel cache driver:
-```php
-$apiKey = env("WEATHER_API_KEY");
-$url = "https://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$apiKey}";
-$result = Cache::get($city);
-if (!is_null($result)) {
-    return $result;
-} else {
-    $res = $this->httpClient->get($url);
-    if ($res->getStatusCode() == 200) {
-        $json = $res->getBody();
-        // 10 minutes TTLc
-        Cache::put($city, $json, 600);
-        return $json;
-    }
-}
-```
-
 ## Manual PHP Setup
 
 Need to install the following:
@@ -149,3 +76,53 @@ To run this application:
 php artisan serve
 ```
 
+## cURL commands
+```bash
+curl http://127.0.0.1:8000/api/weather/<your-favorite-city>
+
+Example:
+curl http://127.0.0.1:8000/api/weather/denver
+```
+
+or
+
+```bash
+curl http://127.0.0.1:8000/api/weather/<your-favorite-zipcode>/<country-code-such-as-us>
+
+Example:
+curl http://127.0.0.1:8000/api/weather/98101/us
+```
+
+or
+
+```bash
+curl http://127.0.0.1:8000/api/weather/id/<your-favorite-city-id>
+
+City id can be found here: http://bulk.openweathermap.org/sample/
+
+Example:
+curl http://127.0.0.1:8000/api/weather/id/833
+```
+
+## Exploring the Momento Cache Integration
+How to use Momento cache client and cache driver can be found in (WeatherController.php)[src/Controllers/WeatherController.php].
+
+Use Momento client directly, check out our PHP SDK [examples](https://github.com/momentohq/client-sdk-php/tree/main/examples)!
+
+Use Momento as a Laravel cache driver:
+```php
+$apiKey = env("WEATHER_API_KEY");
+$url = "https://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$apiKey}";
+$result = Cache::get($city);
+if (!is_null($result)) {
+    return $result;
+} else {
+    $res = $this->httpClient->get($url);
+    if ($res->getStatusCode() == 200) {
+        $json = $res->getBody();
+        // 10 minutes TTLc
+        Cache::put($city, $json, 600);
+        return $json;
+    }
+}
+```
