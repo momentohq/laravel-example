@@ -2,6 +2,7 @@
 
 namespace Momento\LaravelExample\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class ExampleProvider extends ServiceProvider
@@ -13,6 +14,8 @@ class ExampleProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
+        Route::middleware('api')->prefix('api')->group(function () {
+            $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        });
     }
 }
