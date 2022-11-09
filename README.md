@@ -105,9 +105,9 @@ curl http://127.0.0.1:8000/api/weather/id/833
 ```
 
 ## Exploring the Momento Cache Integration
-How to use Momento cache client and cache driver can be found in (WeatherController.php)[src/Controllers/WeatherController.php].
+How to use Momento's Laravel cache client and cache driver can be found in (WeatherController.php)[src/Controllers/WeatherController.php].
 
-Use Momento client directly, check out our PHP SDK [examples](https://github.com/momentohq/client-sdk-php/tree/main/examples)!
+For examples of using the Momento client directly, check out our PHP SDK [examples](https://github.com/momentohq/client-sdk-php/tree/main/examples)!
 
 Use Momento as a Laravel cache driver:
 ```php

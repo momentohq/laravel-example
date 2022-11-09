@@ -76,7 +76,7 @@ class WeatherController extends Controller
             if ($res->getStatusCode() == 200) {
                 $json = $res->getBody();
                 // 10 minutes TTLc
-                Cache::tags(['weather', $cityId])->put($cityWeatherIdInfo, $json, 60);
+                Cache::tags(['weather', $cityId])->put($cityWeatherIdInfo, $json, 600);
                 return $json;
             }
         }
