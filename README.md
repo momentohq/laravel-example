@@ -10,9 +10,26 @@ Intrigued? Keep on reading!
 
 ## Run the app via Docker
 
-Build a Docker image for the app:
+Before building a Docker image, create `.env` file in `docker` directory with the following env variables:
+- `MOMENTO_AUTH_TOKEN`=<YOUR_AUTH_TOKEN>
+- `MOMENTO_CACHE_NAME`=<YOUR_CACHE_NAME>
+- `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
 
-Coming soon.
+Build a Docker image for the app:
+```bash
+cd docker
+docker build --tag laravel-example .
+```
+If you run into the API limits from GitHub, add a GitHub personal access token to your composer configuration:
+```bash
+export COMPOSER_AUTH=<YOUR_GITHUB_ACCESS_TOKEN>
+docker build --tag laravel-example --build-arg COMPOSER_AUTH=$COMPOSER_AUTH .
+```
+
+And run a Docker container with the image:
+```bash
+docker run -d --env-file .env -p 8000:8000 laravel-example
+```
 
 ## Manual PHP Setup
 
