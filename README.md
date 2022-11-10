@@ -20,6 +20,9 @@ Build a Docker image for the app:
 cd docker
 docker build --tag laravel-example .
 ```
+**Notes**: Building the `laravel-example` image involves compiling the PHP gRPC extension.
+And this step to install gRPC is expected to take a long time to complete during build when you first build an image.
+
 If you run into the API limits from GitHub, add a GitHub personal access token to your composer configuration:
 ```bash
 export COMPOSER_AUTH=<YOUR_GITHUB_ACCESS_TOKEN>
