@@ -8,21 +8,10 @@
         "serverless"
     ],
     "license": "Apache-2.0",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/momentohq/client-sdk-php"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/momentohq/laravel-cache"
-        }
-    ],
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.5",
-        "momentohq/client-sdk-php": "0.2.1",
-        "momentohq/laravel-cache": "0.1.3"
+        "momentohq/laravel-cache": "0.2.1"
     },
     "autoload": {
         "psr-4": {
