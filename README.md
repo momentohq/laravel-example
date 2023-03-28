@@ -39,6 +39,7 @@ Need to install the following:
 
 - [PHP](https://www.php.net/manual/en/install.macosx.packages.php)
 - [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+- [Laravel](https://laravel.com/docs/10.x/installation)
 - [gRPC for PHP](https://cloud.google.com/php/grpc)
 
 Add the repository and dependency to your project's `composer.json`:
@@ -46,7 +47,7 @@ Add the repository and dependency to your project's `composer.json`:
 ```json
 {
   "require": {
-    "momentohq/laravel-example": "0.2.0"
+    "momentohq/laravel-example": "0.2.1"
   }
 }
 ```
