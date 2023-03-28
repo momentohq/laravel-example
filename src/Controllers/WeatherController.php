@@ -46,7 +46,7 @@ class WeatherController extends Controller
         $cacheName = "zipcode-cache";
         $momentoClient->createCache($cacheName);
         $apiKey = env("WEATHER_API_KEY");
-        $url = "https://api.openweathermap.org/data/2.5/weather?q={$zipcode},{$countryCode}&appid={$apiKey}";
+        $url = "https://api.openweathermap.org/data/2.5/weather?zip={$zipcode},{$countryCode}&appid={$apiKey}";
         $zipcodeWeatherInfo = "{$zipcode}-{$countryCode}";
         $result = $momentoClient->get($cacheName, $zipcodeWeatherInfo);
         if ($result->asHit()) {
