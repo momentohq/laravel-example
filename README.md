@@ -46,7 +46,7 @@ Add the repository and dependency to your project's `composer.json`:
 ```json
 {
   "require": {
-    "momentohq/laravel-example": "0.1.0"
+    "momentohq/laravel-example": "0.2.0"
   }
 }
 ```
