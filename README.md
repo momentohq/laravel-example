@@ -16,7 +16,8 @@ Before building a Docker image, create `.env` file in `docker` directory with th
 - `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
 
 If you don't have a Momento auth token, you can generate one using the 
-[Momento CLI](https://github.com/momentohq/momento-cli).
+[Momento CLI](https://github.com/momentohq/momento-cli) or our register for a token
+[on our website](https://www.gomomento.com/try-free).
 
 Build a Docker image for the app:
 ```bash
@@ -78,8 +79,9 @@ And add the following environment variables into your `.env` file:
 - `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
 - `MOMENTO_AUTH_TOKEN` 
 
-If you don't have a Momento auth token, you can generate one using the 
-[Momento CLI](https://github.com/momentohq/momento-cli).
+If you don't have a Momento auth token, you can generate one using the
+[Momento CLI](https://github.com/momentohq/momento-cli) or our register for a token
+[on our website](https://www.gomomento.com/try-free).
 
 Run `composer update` to install the necessary prerequisites.
 
