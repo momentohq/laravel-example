@@ -15,6 +15,9 @@ Before building a Docker image, create `.env` file in `docker` directory with th
 - `MOMENTO_CACHE_NAME`=<YOUR_CACHE_NAME>
 - `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
 
+If you don't have a Momento auth token, you can generate one using the 
+[Momento CLI](https://github.com/momentohq/momento-cli).
+
 Build a Docker image for the app:
 ```bash
 cd docker
@@ -35,10 +38,10 @@ docker run -d --env-file .env -p 8000:8000 laravel-example
 
 ## Manual PHP Setup
 
-Need to install the following:
+You will need to install the following:
 
-- [PHP](https://www.php.net/manual/en/install.macosx.packages.php)
-- [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+- [PHP](https://www.php.net/manual/en/install.php)
+- [Composer](https://getcomposer.org/doc/00-intro.md)
 - [Laravel](https://laravel.com/docs/10.x/installation)
 - [gRPC for PHP](https://cloud.google.com/php/grpc)
 
@@ -52,27 +55,33 @@ Add the repository and dependency to your project's `composer.json`:
 }
 ```
 
-Finally, add the required config to your `config/cache.php`:
+Add the Momento configuration to the 'stores' section of `config/cache.php`, adjusting the `cache_name` and 
+`default_ttl` parameters as needed:
 
 ```php
-'default' => env('CACHE_DRIVER', 'momento'),
-
 'stores' => [
+        ...
         'momento' => [
             'driver' => 'momento',
-            'cache_name' => env('MOMENTO_CACHE_NAME'),
+            'cache_name' => 'my-momento-cache',
             'default_ttl' => 60,
         ],
 ],
 ```
 
-Run `composer update` to install the necessary prerequisites.
+Update the cache driver entry in your `.env` file:
 
-You need to set the following environment variables:
+`CACHE_DRIVER=momento`
+
+And add the following environment variables into your `.env` file:
 
 - `WEATHER_API_KEY` this is for weather API. Check out [OpenWeather](https://openweathermap.org/) to get an API key.
-- `MOMENTO_AUTH_TOKEN`
-- `MOMENTO_CACHE_NAME`
+- `MOMENTO_AUTH_TOKEN` 
+
+If you don't have a Momento auth token, you can generate one using the 
+[Momento CLI](https://github.com/momentohq/momento-cli).
+
+Run `composer update` to install the necessary prerequisites.
 
 To run this application:
 
@@ -109,11 +118,13 @@ curl http://127.0.0.1:8000/api/weather/id/833
 ```
 
 ## Exploring the Momento Cache Integration
-How to use Momento's Laravel cache client and cache driver can be found in (WeatherController.php)[src/Controllers/WeatherController.php].
+Examples of different ways to use Momento's Laravel cache client and cache driver can be found in the 
+[WeatherController.php](src/Controllers/WeatherController.php).
 
 For examples of using the Momento client directly, check out our PHP SDK [examples](https://github.com/momentohq/client-sdk-php/tree/main/examples)!
 
-Use Momento as a Laravel cache driver:
+A simple example usage of Momento's Laravel cache driver is extracted below:
+
 ```php
 $apiKey = env("WEATHER_API_KEY");
 $url = "https://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$apiKey}";
