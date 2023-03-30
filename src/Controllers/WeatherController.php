@@ -6,7 +6,8 @@ use GuzzleHttp\Client;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Cache;
 use Momento\Auth\EnvMomentoTokenProvider;
-use Momento\Cache\SimpleCacheClient;
+use Momento\Cache\CacheClient;
+use Momento\Config\Configurations\Laptop;
 
 class WeatherController extends Controller
 {
@@ -41,8 +42,9 @@ class WeatherController extends Controller
     // This function create a Momento client and uses it as cache.
     public function zipcode($zipcode, $countryCode)
     {
+        $configuration = Laptop::latest();
         $authProvider = new EnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN");
-        $momentoClient = new SimpleCacheClient($authProvider, 60);
+        $momentoClient = new CacheClient($configuration, $authProvider, 60);
         $cacheName = "zipcode-cache";
         $momentoClient->createCache($cacheName);
         $apiKey = env("WEATHER_API_KEY");
@@ -50,7 +52,7 @@ class WeatherController extends Controller
         $zipcodeWeatherInfo = "{$zipcode}-{$countryCode}";
         $result = $momentoClient->get($cacheName, $zipcodeWeatherInfo);
         if ($result->asHit()) {
-            return $result->asHit()->value();
+            return $result->asHit()->valueString();
         }
         elseif ($result->asMiss()) {
             $res = $this->httpClient->get($url);

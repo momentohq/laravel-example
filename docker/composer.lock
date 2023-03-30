@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a8bf2265185ff95d68c4b6ad423c627",
+    "content-hash": "3355be69216203953db5253c2575eee9",
     "packages": [
         {
             "name": "brick/math",
@@ -1988,16 +1988,16 @@
         },
         {
             "name": "momentohq/laravel-example",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/laravel-example.git",
-                "reference": "3299a72e560d7303e7ab16e17be25196ac070261"
+                "reference": "753ece52b4bf075645791322780742afdecf5e88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/laravel-example/zipball/3299a72e560d7303e7ab16e17be25196ac070261",
-                "reference": "3299a72e560d7303e7ab16e17be25196ac070261",
+                "url": "https://api.github.com/repos/momentohq/laravel-example/zipball/753ece52b4bf075645791322780742afdecf5e88",
+                "reference": "753ece52b4bf075645791322780742afdecf5e88",
                 "shasum": ""
             },
             "require": {
@@ -2031,9 +2031,9 @@
             ],
             "support": {
                 "issues": "https://github.com/momentohq/laravel-example/issues",
-                "source": "https://github.com/momentohq/laravel-example/tree/v0.2.0"
+                "source": "https://github.com/momentohq/laravel-example/tree/v0.2.1"
             },
-            "time": "2023-03-28T20:01:18+00:00"
+            "time": "2023-03-28T21:26:37+00:00"
         },
         {
             "name": "monolog/monolog",
