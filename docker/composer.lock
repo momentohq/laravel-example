@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3355be69216203953db5253c2575eee9",
+    "content-hash": "a37e30d7549d83bc3ebad1fc8550f7ad",
     "packages": [
         {
             "name": "brick/math",
@@ -1929,16 +1929,16 @@
         },
         {
             "name": "momentohq/laravel-cache",
-            "version": "v0.2.1",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/laravel-cache.git",
-                "reference": "d3440de087c185131f10ce0c40ee9eb3523171b0"
+                "reference": "7ce12078708c7af68c57b5c7e6669658f3bcb1f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/d3440de087c185131f10ce0c40ee9eb3523171b0",
-                "reference": "d3440de087c185131f10ce0c40ee9eb3523171b0",
+                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/7ce12078708c7af68c57b5c7e6669658f3bcb1f6",
+                "reference": "7ce12078708c7af68c57b5c7e6669658f3bcb1f6",
                 "shasum": ""
             },
             "require": {
@@ -1984,25 +1984,25 @@
                 "issues": "https://github.com/momentohq/laravel-cache/issues",
                 "source": "https://github.com/momentohq/laravel-cache"
             },
-            "time": "2023-03-28T17:47:00+00:00"
+            "time": "2023-03-29T22:01:50+00:00"
         },
         {
             "name": "momentohq/laravel-example",
-            "version": "v0.2.1",
+            "version": "v0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/laravel-example.git",
-                "reference": "753ece52b4bf075645791322780742afdecf5e88"
+                "reference": "050866b463a619786771bb148cabf27fd4709b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/laravel-example/zipball/753ece52b4bf075645791322780742afdecf5e88",
-                "reference": "753ece52b4bf075645791322780742afdecf5e88",
+                "url": "https://api.github.com/repos/momentohq/laravel-example/zipball/050866b463a619786771bb148cabf27fd4709b2b",
+                "reference": "050866b463a619786771bb148cabf27fd4709b2b",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.5",
-                "momentohq/laravel-cache": "0.2.1",
+                "momentohq/laravel-cache": "1.0.0",
                 "php": "^8.0.2"
             },
             "type": "project",
@@ -2031,9 +2031,9 @@
             ],
             "support": {
                 "issues": "https://github.com/momentohq/laravel-example/issues",
-                "source": "https://github.com/momentohq/laravel-example/tree/v0.2.1"
+                "source": "https://github.com/momentohq/laravel-example/tree/v0.2.2"
             },
-            "time": "2023-03-28T21:26:37+00:00"
+            "time": "2023-03-30T00:01:56+00:00"
         },
         {
             "name": "monolog/monolog",
