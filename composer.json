@@ -11,7 +11,7 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.5",
-        "momentohq/laravel-cache": "1.0.0"
+        "momentohq/laravel-cache": "1.0.1"
     },
     "autoload": {
         "psr-4": {
