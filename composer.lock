@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "753c9e3625f887f7ea89a52a7f01cecb",
+    "content-hash": "c893bada3652e147c4614f124581e7d3",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -115,16 +115,16 @@
         },
         {
             "name": "grpc/grpc",
-            "version": "1.42.0",
+            "version": "1.52.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/grpc/grpc-php.git",
-                "reference": "9fa44f104cb92e924d4da547323a97f3d8aca6d4"
+                "reference": "98394cd601a587ca68294e6209bd713856969105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/9fa44f104cb92e924d4da547323a97f3d8aca6d4",
-                "reference": "9fa44f104cb92e924d4da547323a97f3d8aca6d4",
+                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/98394cd601a587ca68294e6209bd713856969105",
+                "reference": "98394cd601a587ca68294e6209bd713856969105",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
                 "rpc"
             ],
             "support": {
-                "source": "https://github.com/grpc/grpc-php/tree/v1.42.0"
+                "source": "https://github.com/grpc/grpc-php/tree/v1.52.0"
             },
-            "time": "2021-11-19T08:13:51+00:00"
+            "time": "2023-02-25T05:20:08+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -490,23 +490,23 @@
         },
         {
             "name": "momentohq/client-sdk-php",
-            "version": "v1.0.0",
+            "version": "dev-grpc-fork-test",
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/client-sdk-php.git",
-                "reference": "461ab7fc6ef960834229592d4a47fa023927e24d"
+                "reference": "78ea15234690560b5223c0c7186b7e6b00ab130b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/client-sdk-php/zipball/461ab7fc6ef960834229592d4a47fa023927e24d",
-                "reference": "461ab7fc6ef960834229592d4a47fa023927e24d",
+                "url": "https://api.github.com/repos/momentohq/client-sdk-php/zipball/78ea15234690560b5223c0c7186b7e6b00ab130b",
+                "reference": "78ea15234690560b5223c0c7186b7e6b00ab130b",
                 "shasum": ""
             },
             "require": {
                 "ext-grpc": "*",
                 "firebase/php-jwt": "^6.3",
                 "google/protobuf": "3.21.5",
-                "grpc/grpc": "1.42.0",
+                "grpc/grpc": "1.52.0",
                 "php": ">=8.0",
                 "psr/log": "^2.0",
                 "psr/simple-cache": "^3.0"
@@ -556,24 +556,24 @@
                 "issues": "https://github.com/momentohq/client-sdk-php/issues",
                 "source": "https://github.com/momentohq/client-sdk-php"
             },
-            "time": "2023-03-29T21:41:51+00:00"
+            "time": "2023-03-30T17:51:38+00:00"
         },
         {
             "name": "momentohq/laravel-cache",
-            "version": "v1.0.1",
+            "version": "dev-grpc-fork-test",
             "source": {
                 "type": "git",
                 "url": "https://github.com/momentohq/laravel-cache.git",
-                "reference": "26babf870f9e325a1c2216ee2813690ecc1190ab"
+                "reference": "ff9426874d9d7ea369dfeff626fdbdf1efae94ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/26babf870f9e325a1c2216ee2813690ecc1190ab",
-                "reference": "26babf870f9e325a1c2216ee2813690ecc1190ab",
+                "url": "https://api.github.com/repos/momentohq/laravel-cache/zipball/ff9426874d9d7ea369dfeff626fdbdf1efae94ca",
+                "reference": "ff9426874d9d7ea369dfeff626fdbdf1efae94ca",
                 "shasum": ""
             },
             "require": {
-                "momentohq/client-sdk-php": "1.0.0"
+                "momentohq/client-sdk-php": "dev-grpc-fork-test"
             },
             "require-dev": {
                 "orchestra/testbench": "^7.11"
@@ -615,7 +615,7 @@
                 "issues": "https://github.com/momentohq/laravel-cache/issues",
                 "source": "https://github.com/momentohq/laravel-cache"
             },
-            "time": "2023-03-30T16:39:47+00:00"
+            "time": "2023-03-30T17:54:18+00:00"
         },
         {
             "name": "psr/http-client",
@@ -993,7 +993,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "momentohq/laravel-cache": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
