@@ -43,7 +43,7 @@ class WeatherController extends Controller
     public function zipcode($zipcode, $countryCode)
     {
         $configuration = Laptop::latest();
-        $authProvider = new EnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN");
+        $authProvider = new EnvMomentoTokenProvider("MOMENTO_API_KEY");
         $momentoClient = new CacheClient($configuration, $authProvider, 60);
         $cacheName = "zipcode-cache";
         $momentoClient->createCache($cacheName);
