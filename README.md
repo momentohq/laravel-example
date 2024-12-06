@@ -1,7 +1,7 @@
 <head>
   <meta name="Momento Laravel cache driver example" content="Taggable Momento serverless cache driver example for Laravel">
 </head>
-<img src="https://docs.momentohq.com/img/logo.svg" alt="logo" width="400"/>
+<img src="https://docs.momentohq.com/img/momento-logo-forest.svg" alt="logo" width="400"/>
 
 # Momento Laravel Example
 In this repo, you will see an example of how to integrate a Momento cache into your Laravel app, instead of a Redis or Memcached.
